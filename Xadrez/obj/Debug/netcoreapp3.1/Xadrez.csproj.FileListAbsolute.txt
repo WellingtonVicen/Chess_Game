@@ -1,0 +1,13 @@
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.exe
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.deps.json
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.runtimeconfig.json
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.runtimeconfig.dev.json
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.dll
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.pdb
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.csprojAssemblyReference.cache
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.AssemblyInfoInputs.cache
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.AssemblyInfo.cs
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.csproj.CoreCompileInputs.cache
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.dll
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.pdb
+C:\Users\bebev\OneDrive\Área de Trabalho\Curso_C#\Projeto jogo de Xadrez\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.genruntimeconfig.cache
