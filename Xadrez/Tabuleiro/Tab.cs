@@ -17,5 +17,10 @@ namespace Tabuleiro
             Colunas = colunas;
             Pecas = new Peca[linhas, colunas];
         }
+
+        public Peca Peca(int linha, int colunas)
+        {
+            return Pecas[linha, colunas];
+        }
     }
 }
