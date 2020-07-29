@@ -25,12 +25,12 @@ namespace Xadrez
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
-            for (int indice = 0; indice < tab.Linhas; indice++)
+            for (int linhas = 0; linhas < tab.Linhas; linhas++)
             {
-                Console.Write(8 - indice + " ");
+                Console.Write(8 - linhas + " ");
                 for (int col = 0; col < tab.Colunas; col++)
                 {
-                    if(posicoesPossiveis[indice, col])
+                    if(posicoesPossiveis[linhas, col])
                     {
                         Console.BackgroundColor = fundoAlterado;
                     }
@@ -38,7 +38,7 @@ namespace Xadrez
                     {
                         Console.BackgroundColor = fundoOriginal;
                     }
-                    Tela.ImprimirPeca(tab.Peca(indice, col));
+                    Tela.ImprimirPeca(tab.Peca(linhas, col));
                     Console.BackgroundColor = fundoOriginal;
                 }
                 Console.WriteLine();
