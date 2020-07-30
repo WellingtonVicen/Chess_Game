@@ -44,7 +44,7 @@ namespace Xadrez
 
             // #JogadaEspecial roque pequeno
 
-            if(p is Rei && destino.coluna == origem.coluna + 2)
+            if (p is Rei && destino.coluna == origem.coluna + 2)
             {
                 Posicao origemT = new Posicao(origem.linha, origem.coluna + 3);
                 Posicao destinoT = new Posicao(origem.linha, origem.coluna + 1);
@@ -66,12 +66,12 @@ namespace Xadrez
 
             // #jogadaEspecial en passant
 
-            if(p is Peao)
+            if (p is Peao)
             {
-                if(origem.coluna != destino.coluna && pecaCapturada == null)
+                if (origem.coluna != destino.coluna && pecaCapturada == null)
                 {
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(destino.linha + 1, destino.coluna);
                     }
@@ -123,13 +123,13 @@ namespace Xadrez
 
             // #JogadaEspecial en passant 
 
-            if(p is Peao)
+            if (p is Peao)
             {
-                if(origem.coluna != destino.coluna && pecaCapturada == VulneravelEnPassant)
+                if (origem.coluna != destino.coluna && pecaCapturada == VulneravelEnPassant)
                 {
                     Peca peao = Tab.RetirarPeca(destino);
                     Posicao posP;
-                    if(p.Cor == Cor.Branca)
+                    if (p.Cor == Cor.Branca)
                     {
                         posP = new Posicao(3, destino.coluna);
                     }
@@ -140,7 +140,7 @@ namespace Xadrez
                     Tab.ColocarPeca(peao, posP);
                 }
             }
-          
+
 
         }
 
@@ -153,6 +153,22 @@ namespace Xadrez
                 DesfazMovimento(origem, destino, pecaCapturada);
 
                 throw new TabException("Você não pode se colocar em xeque!");
+            }
+
+            Peca p = Tab.Peca(destino);
+
+            // #JogadaEspecial Promocao
+            if (p is Peao)
+            {
+                if(p.Cor == Cor.Branca && destino.linha ==0 || p.Cor == Cor.Preta && destino.linha == 7)
+                {
+                    p = Tab.RetirarPeca(destino);
+                    pecas.Remove(p);
+                    Peca dama = new Dama(Tab, p.Cor);
+                    Tab.ColocarPeca(dama, destino);
+                    pecas.Add(dama);
+                }
+
             }
 
             if (EstaEmXeque(Adversaria(JogadorAtual)))
@@ -175,11 +191,9 @@ namespace Xadrez
 
             }
 
-            Peca p = Tab.Peca(destino);
-
             // #JogadaEspecial En passant
 
-            if(p is Peao && (destino.linha == origem.linha -2) || destino.linha == origem.linha + 2)
+            if (p is Peao && (destino.linha == origem.linha - 2) || destino.linha == origem.linha + 2)
             {
                 VulneravelEnPassant = p;
             }
@@ -350,14 +364,14 @@ namespace Xadrez
             ColocarNovaPeca('f', 1, new Bispo(Tab, Cor.Branca));
             ColocarNovaPeca('g', 1, new Cavalo(Tab, Cor.Branca));
             ColocarNovaPeca('h', 1, new Torre(Tab, Cor.Branca));
-            ColocarNovaPeca('a', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('b', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('c', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('d', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('e', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('f', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('g', 2, new Peao(Tab, Cor.Branca,this));
-            ColocarNovaPeca('h', 2, new Peao(Tab, Cor.Branca,this));
+            ColocarNovaPeca('a', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('b', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('c', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('d', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('e', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('f', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('g', 2, new Peao(Tab, Cor.Branca, this));
+            ColocarNovaPeca('h', 2, new Peao(Tab, Cor.Branca, this));
 
             ColocarNovaPeca('a', 8, new Torre(Tab, Cor.Preta));
             ColocarNovaPeca('b', 8, new Cavalo(Tab, Cor.Preta));
